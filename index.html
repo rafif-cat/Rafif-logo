@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Google G Logo CSS</title>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    font-family: Arial, sans-serif;
+  }
+
+  .logo-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Base white circle */
+  .logo-base {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
+  }
+
+  /* The outer colored strokes of the G */
+
+  .stroke-blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 17px solid #4285F4;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+
+  .stroke-red {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 70%;
+    border: 17px solid #EA4335;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transform: translate(15%, 15%);
+  }
+
+  .stroke-yellow {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 60%;
+    height: 60%;
+    border: 17px solid #FBBC05;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transform: translate(10%, 30%);
+  }
+
+  .stroke-green {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 36%;
+    height: 36%;
+    border: 17px solid #34A853;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-left-radius: 50% 60%;
+    border-radius: 0 0 50% 50% / 0 0 60% 60%;
+    box-sizing: border-box;
+    transform: translate(25%, 25%);
+  }
+
+  /* The cutout bar to form the horizontal stroke */
+  .horizontal-bar {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    width: 35%;
+    height: 18%;
+    background: white;
+    border-radius: 8px;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+
+  /* Responsive scaling for smaller devices */
+  @media (max-width: 400px) {
+    .logo-container {
+      width: 80px;
+      height: 80px;
+    }
+    .stroke-blue,
+    .stroke-red,
+    .stroke-yellow,
+    .stroke-green {
+      border-width: 14px;
+    }
+    .stroke-red {
+      transform: translate(14%, 14%);
+      width: 68%;
+      height: 68%;
+    }
+    .stroke-yellow {
+      transform: translate(9%, 26%);
+      width: 58%;
+      height: 58%;
+    }
+    .stroke-green {
+      transform: translate(21%, 21%);
+      width: 32%;
+      height: 32%;
+    }
+    .horizontal-bar {
+      width: 30%;
+      height: 15%;
+      top: 56%;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="logo-container" role="img" aria-label="Google G logo">
+    <div class="stroke-blue"></div>
+    <div class="stroke-red"></div>
+    <div class="stroke-yellow"></div>
+    <div class="stroke-green"></div>
+    <div class="horizontal-bar"></div>
+    <div class="logo-base"></div>
+  </div>
+</body>
+</html>
+</content>
+</create_file>
